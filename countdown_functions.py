@@ -3,12 +3,17 @@ import os
 
 
 def input_message():
+    """
+     prompts the user to enter a time in the `hh:mm:ss` format.
+    """
     time_input = input ('\nPlease enter the time. It should be in the hh:mm:ss format: ')
     return time_input
 
 
 def check_input(time_input):
-
+    """
+    Checks that the input matches the required format and converts it into total seconds for the countdown.
+    """
     while True:
         try:
             if len(time_input) != 8:
@@ -28,6 +33,9 @@ def check_input(time_input):
 
 
 def show_countdown(seconds):
+    """
+    Initiates the countdown, updating the time remaining every second and displaying it on the screen.
+    """
     
     os.system('cls')  
     input('''
